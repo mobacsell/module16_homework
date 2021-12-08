@@ -1,0 +1,59 @@
+.form   {
+    text-align: center;
+}
+
+.form__text {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    padding: 5px;
+    margin: 5px;
+    border: 1px solid #9cbb14;
+    color: #404040;
+    outline: none;
+}
+
+.form__btn  {
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+    background-color: #9cbb14;
+    color: #fff;
+    border: 1px solid #9cbb14;
+    padding: 6px 67px;
+    margin: 5px;
+    outline: none;
+    cursor: pointer;
+}
+.form__btn:hover    {
+    background-color: #fff;
+    color: #9cbb14;
+}
+
+.result     {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+    font-size: 14px;
+}
+
+.result__text   {
+    color: #404040;
+}
+
+.result__text--error   {
+    color: #bf2323;
+}
+
+.card-item  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: space-between;
+    margin: 5px;
+    border: 1px solid #9cbb14;
+    width: 400px;
+}
+
+.card-item__image   {
+    width: 400px;
+}
