@@ -6,18 +6,25 @@ const   textInput = document.querySelector('.form__text'),
 
 btn.addEventListener('click', (event) => {
     event.preventDefault();
-    getRequestResult();
+    if(textInput.value) {
+        getRequestResult();
+    } else {
+        resultArea.innerHTML = `
+            <p class="result-area__text--error">ID пользователя не введен.</p>
+        `;
+    }
 });
 
-async function getRequestResult(formatData) {
+async function getRequestResult() {
 //Async-функция, отправляющая запрос и обрабатывающая результат запроса
 
     try {
-        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${textInput.value}/todos`);
-        
         resultArea.innerHTML = `
             <p class="result-area__text--waiting">Получение данных. Подождите...</p>
         `;
+
+        const res = await fetch(`https://jsonplaceholder.typicode.com/users/${textInput.value}/todos`);
+
         res.text().then((result) => {
             if (result !== '[]') {
                 formatRequestData(JSON.parse(result));
